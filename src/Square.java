@@ -6,7 +6,7 @@
  */
 
 //implement Shape interface and provide abstract method implementation
-public class Square{
+public class Square implements Shape{
 
     /*
     Define an instance variable for Square called as side
@@ -14,6 +14,21 @@ public class Square{
     double side
      */
 
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
+    }
+
+    @Override
+    public double area(double a) {
+        return side * side;
+    }
+
+    @Override
+    public double perimeter(double p) {
+        return 4 * side;
+    }
 
 
 
@@ -29,4 +44,11 @@ public class Square{
 
     //Override toString() method here
 
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
+    }
 }
